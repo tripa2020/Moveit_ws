@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<robot name="tripp">
+    <!-- DESCIPTION OF PLANAR 3DOF ROBOT -->
+    <!-- LINK DESCRIPTIONS -->
+    <link name="world" />
+    <!-- PRISMATIC LINK (base_link) -->
+    <link name="linkb">
+        <inertial>
+            <origin xyz="-0.02 0 0.02" rpy="0 0 0" />
+            <mass value="0.4" />
+            <inertia ixx="0.000425" ixy="0" ixz="0" iyy="0.000425" iyz="0" izz="0.000425" />
+        </inertial>
+        <visual>
+            <origin xyz="-0.02 0 0.02" rpy="0 0 0" />
+            <geometry>
+                <box size="0.04 0.04 0.04" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.02 0 0.02" rpy="0 0 0" />
+            <geometry>
+                <box size="0.04 0.04 0.04" />
+            </geometry>
+        </collision>
+    </link>
+    <!-- FIRST LINK (LINKB) -->
+    <!-- BASE LINK (LINK_0) -->
+    <link name="link1">
+        <inertial>
+            <origin xyz="0.04 0 0.02" rpy="0 0 0" />
+            <mass value="0.4" />
+            <inertia ixx="0.000425" ixy="0" ixz="0" iyy="0.000425" iyz="0" izz="0.000425" />
+        </inertial>
+        <visual>
+            <origin xyz="0.04 0 0.02" rpy="0 0 0" />
+            <geometry>
+                <box size="0.08 0.04 0.04" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.04 0 0.02" rpy="0 0 0" />
+            <geometry>
+                <box size="0.08 0.04 0.04" />
+            </geometry>
+        </collision>
+    </link>
+    <!-- FIRST LINK (LINK_1) -->
+    <link name="link2">
+        <inertial>
+            <origin xyz="0 0 .10" rpy="0 0 0" />
+            <mass value="4" />
+            <inertia ixx="0.00133" ixy="0" ixz="0" iyy="0.00133" iyz="0" izz="0.00000664" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 .10" rpy="0 0 0" />
+            <geometry>
+                <box size="0.01 0.01 .20" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 .10" rpy="0 0 0" />
+            <geometry>
+                <box size="0.00001 0.0001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <!-- 2ND LINK (LINK_2)  -->
+    <link name="link3">
+        <inertial>
+            <origin xyz="0 0 0.075" rpy="0 0 0" />
+            <mass value="0.4" />
+            <inertia ixx="0.00075" ixy="0" ixz="0" iyy="0.00075" iyz="0" izz="0.00000664" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.075" rpy="0 0 0" />
+            <geometry>
+                <box size="0.01 0.01 .15" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 .075" rpy="0 0 0" />
+            <geometry>
+                <box size="0 0 0.01" />
+            </geometry>
+        </collision>
+    </link>
+    <!-- 3RD LINK (LINK_3)  -->
+    <link name="link4">
+        <inertial>
+            <origin xyz="0 0 0.025" rpy="0 0 0" />
+            <mass value="0.4" />
+            <inertia ixx="0.00075" ixy="0" ixz="0" iyy="0.00075" iyz="0" izz="0.00000664" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.025" rpy="0 0 0" />
+            <geometry>
+                <box size="0.01 0.01 0.05" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 .025" rpy="0 0 0" />
+            <geometry>
+                <box size="0 0 0.01" />
+            </geometry>
+        </collision>
+    </link>
+    <!-- JOINT DESCIRPTIONS -->
+    <!-- WORLD JOINT ( LINKS BASE TO WORLD ) -->
+    <joint name="fixed" type="fixed">
+        <parent link="world" />
+        <child link="linkb" />
+    </joint>
+    <!-- PRISMATIC JOINT (JOINT)0 -->
+    <joint name="joint0" type="prismatic">
+        <parent link="linkb" />
+        <child link="link1" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="0" upper="1" effort="100" velocity="1.0" />
+    </joint>
+    <!-- FIRST JOINT (JOINT_1) -->
+    <joint name="joint1" type="revolute">
+        <parent link="link1" />
+        <child link="link2" />
+        <origin xyz="0.04 0 0.04" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1.571" upper="1.571" effort="100" velocity="1.0" />
+    </joint>
+    <!-- SECOND JOINT (JOINT_2) -->
+    <joint name="joint2" type="revolute">
+        <parent link="link2" />
+        <child link="link3" />
+        <origin xyz="0 0 .20" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="-2.8" upper="2.8" effort="100" velocity="1.0" />
+    </joint>
+    <!-- THIRD JOINT (JOINT_3) -->
+    <joint name="joint3" type="revolute">
+        <parent link="link3" />
+        <child link="link4" />
+        <origin xyz="0 0 .15" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="-2.8" upper="2.8" effort="100" velocity="1.0" />
+    </joint>
+    <!-- GAZEBO PLUGINS -->
+    <!-- <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>tripp</robotNamespace>
+        </plugin>
+    </gazebo> -->
+    <!-- TRANSMISSION BLOCKS FOR ROS_CONTROL -->
+    <transmission name="tran0">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint0">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor0">
+            <hardwareInterface>PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="tran1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor1">
+            <hardwareInterface>PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="tran2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor2">
+            <hardwareInterface>PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="tran3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor3">
+            <hardwareInterface>PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>
+

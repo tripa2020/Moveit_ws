@@ -1,0 +1,8 @@
+prefix=/home/alex/moveit_ws/install
+
+Name: testbot_hw_interface
+Description: Description of testbot_hw_interface
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -ltestbot_hw_interface
+Requires: controller_manager hardware_interface roscpp rospy sensor_msgs std_msgs

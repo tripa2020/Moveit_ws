@@ -1,0 +1,496 @@
+/controller_list:
+- action_ns: follow_joint_trajectory
+  default: true
+  joints:
+  - joint0
+  - joint1
+  - joint2
+  - joint3
+  name: tripp_arm_controller
+  type: FollowJointTrajectory
+- action_ns: follow_joint_trajectory
+  default: true
+  joints:
+  - joint3
+  name: gripper_controller
+  type: FollowJointTrajectory
+- action_ns: follow_joint_trajectory
+  default: true
+  joints:
+  - joint0
+  - joint1
+  - joint2
+  - joint3
+  name: tripp_position_controller
+  type: FollowJointTrajectory
+/joint_state_controller/publish_rate: 10
+/joint_state_controller/type: joint_state_controller/JointStateController
+/move_group/allow_trajectory_execution: true
+/move_group/capabilities: ''
+/move_group/controller_list:
+- action_ns: follow_joint_trajectory
+  default: true
+  joints:
+  - joint0
+  - joint1
+  - joint2
+  - joint3
+  name: tripp_arm_controller
+  type: FollowJointTrajectory
+- action_ns: follow_joint_trajectory
+  default: true
+  joints:
+  - joint3
+  name: gripper_controller
+  type: FollowJointTrajectory
+- action_ns: follow_joint_trajectory
+  default: true
+  joints:
+  - joint0
+  - joint1
+  - joint2
+  - joint3
+  name: tripp_position_controller
+  type: FollowJointTrajectory
+/move_group/default_planning_pipeline: ompl
+/move_group/disable_capabilities: ''
+/move_group/gripper_controller/gains/joint3/d: 1
+/move_group/gripper_controller/gains/joint3/i: 1
+/move_group/gripper_controller/gains/joint3/i_clamp: 1
+/move_group/gripper_controller/gains/joint3/p: 100
+/move_group/gripper_controller/joints:
+- joint3
+/move_group/gripper_controller/type: effort_controllers/JointTrajectoryController
+/move_group/monitor_dynamics: false
+/move_group/moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+/move_group/moveit_manage_controllers: true
+/move_group/planning_pipelines/chomp/collision_clearance: 0.2
+/move_group/planning_pipelines/chomp/collision_threshold: 0.07
+/move_group/planning_pipelines/chomp/enable_failure_recovery: false
+/move_group/planning_pipelines/chomp/jiggle_fraction: 0.05
+/move_group/planning_pipelines/chomp/joint_update_limit: 0.1
+/move_group/planning_pipelines/chomp/learning_rate: 0.01
+/move_group/planning_pipelines/chomp/max_iterations: 200
+/move_group/planning_pipelines/chomp/max_iterations_after_collision_free: 5
+/move_group/planning_pipelines/chomp/max_recovery_attempts: 5
+/move_group/planning_pipelines/chomp/obstacle_cost_weight: 1.0
+/move_group/planning_pipelines/chomp/planning_plugin: chomp_interface/CHOMPPlanner
+/move_group/planning_pipelines/chomp/planning_time_limit: 10.0
+/move_group/planning_pipelines/chomp/pseudo_inverse_ridge_factor: 1e-4
+/move_group/planning_pipelines/chomp/request_adapters: default_planner_request_adapters/LimitMaxCartesianLinkSpeed                 default_planner_request_adapters/AddTimeParameterization                 default_planner_request_adapters/ResolveConstraintFrames                 default_planner_request_adapters/FixWorkspaceBounds                 default_planner_request_adapters/FixStartStateBounds                 default_planner_request_adapters/FixStartStateCollision                 default_planner_request_adapters/FixStartStatePathConstraints
+/move_group/planning_pipelines/chomp/ridge_factor: 0.0
+/move_group/planning_pipelines/chomp/smoothness_cost_acceleration: 1.0
+/move_group/planning_pipelines/chomp/smoothness_cost_jerk: 0.0
+/move_group/planning_pipelines/chomp/smoothness_cost_velocity: 0.0
+/move_group/planning_pipelines/chomp/smoothness_cost_weight: 0.1
+/move_group/planning_pipelines/chomp/start_state_max_bounds_error: 0.1
+/move_group/planning_pipelines/chomp/use_pseudo_inverse: false
+/move_group/planning_pipelines/chomp/use_stochastic_descent: true
+/move_group/planning_pipelines/ompl/gripper/planner_configs:
+- AnytimePathShortening
+- SBL
+- EST
+- LBKPIECE
+- BKPIECE
+- KPIECE
+- RRT
+- RRTConnect
+- RRTstar
+- TRRT
+- PRM
+- PRMstar
+- FMT
+- BFMT
+- PDST
+- STRIDE
+- BiTRRT
+- LBTRRT
+- BiEST
+- ProjEST
+- LazyPRM
+- LazyPRMstar
+- SPARS
+- SPARStwo
+- AITstar
+- ABITstar
+- BITstar
+/move_group/planning_pipelines/ompl/jiggle_fraction: 0.05
+/move_group/planning_pipelines/ompl/planner_configs/ABITstar/delay_rewiring_to_first_solution: 0
+/move_group/planning_pipelines/ompl/planner_configs/ABITstar/drop_unconnected_samples_on_prune: 0
+/move_group/planning_pipelines/ompl/planner_configs/ABITstar/find_approximate_solutions: 0
+/move_group/planning_pipelines/ompl/planner_configs/ABITstar/inflation_scaling_parameter: 10
+/move_group/planning_pipelines/ompl/planner_configs/ABITstar/initial_inflation_factor: 1000000
+/move_group/planning_pipelines/ompl/planner_configs/ABITstar/prune_threshold_as_fractional_cost_change: 0.1
+/move_group/planning_pipelines/ompl/planner_configs/ABITstar/rewire_factor: 1.001
+/move_group/planning_pipelines/ompl/planner_configs/ABITstar/samples_per_batch: 100
+/move_group/planning_pipelines/ompl/planner_configs/ABITstar/stop_on_each_solution_improvement: 0
+/move_group/planning_pipelines/ompl/planner_configs/ABITstar/truncation_scaling_parameter: 5.0
+/move_group/planning_pipelines/ompl/planner_configs/ABITstar/type: geometric::ABITstar
+/move_group/planning_pipelines/ompl/planner_configs/ABITstar/use_graph_pruning: 1
+/move_group/planning_pipelines/ompl/planner_configs/ABITstar/use_just_in_time_sampling: 0
+/move_group/planning_pipelines/ompl/planner_configs/ABITstar/use_k_nearest: 1
+/move_group/planning_pipelines/ompl/planner_configs/ABITstar/use_strict_queue_ordering: 0
+/move_group/planning_pipelines/ompl/planner_configs/AITstar/find_approximate_solutions: 0
+/move_group/planning_pipelines/ompl/planner_configs/AITstar/rewire_factor: 1.001
+/move_group/planning_pipelines/ompl/planner_configs/AITstar/samples_per_batch: 100
+/move_group/planning_pipelines/ompl/planner_configs/AITstar/set_max_num_goals: 1
+/move_group/planning_pipelines/ompl/planner_configs/AITstar/type: geometric::AITstar
+/move_group/planning_pipelines/ompl/planner_configs/AITstar/use_graph_pruning: 1
+/move_group/planning_pipelines/ompl/planner_configs/AITstar/use_k_nearest: 1
+/move_group/planning_pipelines/ompl/planner_configs/AnytimePathShortening/hybridize: true
+/move_group/planning_pipelines/ompl/planner_configs/AnytimePathShortening/max_hybrid_paths: 24
+/move_group/planning_pipelines/ompl/planner_configs/AnytimePathShortening/num_planners: 4
+/move_group/planning_pipelines/ompl/planner_configs/AnytimePathShortening/planners: ''
+/move_group/planning_pipelines/ompl/planner_configs/AnytimePathShortening/shortcut: true
+/move_group/planning_pipelines/ompl/planner_configs/AnytimePathShortening/type: geometric::AnytimePathShortening
+/move_group/planning_pipelines/ompl/planner_configs/BFMT/balanced: 0
+/move_group/planning_pipelines/ompl/planner_configs/BFMT/cache_cc: 1
+/move_group/planning_pipelines/ompl/planner_configs/BFMT/extended_fmt: 1
+/move_group/planning_pipelines/ompl/planner_configs/BFMT/heuristics: 1
+/move_group/planning_pipelines/ompl/planner_configs/BFMT/nearest_k: 1
+/move_group/planning_pipelines/ompl/planner_configs/BFMT/num_samples: 1000
+/move_group/planning_pipelines/ompl/planner_configs/BFMT/optimality: 1
+/move_group/planning_pipelines/ompl/planner_configs/BFMT/radius_multiplier: 1.0
+/move_group/planning_pipelines/ompl/planner_configs/BFMT/type: geometric::BFMT
+/move_group/planning_pipelines/ompl/planner_configs/BITstar/delay_rewiring_to_first_solution: 0
+/move_group/planning_pipelines/ompl/planner_configs/BITstar/drop_unconnected_samples_on_prune: 0
+/move_group/planning_pipelines/ompl/planner_configs/BITstar/find_approximate_solutions: 0
+/move_group/planning_pipelines/ompl/planner_configs/BITstar/prune_threshold_as_fractional_cost_change: 0.1
+/move_group/planning_pipelines/ompl/planner_configs/BITstar/rewire_factor: 1.001
+/move_group/planning_pipelines/ompl/planner_configs/BITstar/samples_per_batch: 100
+/move_group/planning_pipelines/ompl/planner_configs/BITstar/stop_on_each_solution_improvement: 0
+/move_group/planning_pipelines/ompl/planner_configs/BITstar/type: geometric::BITstar
+/move_group/planning_pipelines/ompl/planner_configs/BITstar/use_graph_pruning: 1
+/move_group/planning_pipelines/ompl/planner_configs/BITstar/use_just_in_time_sampling: 0
+/move_group/planning_pipelines/ompl/planner_configs/BITstar/use_k_nearest: 1
+/move_group/planning_pipelines/ompl/planner_configs/BITstar/use_strict_queue_ordering: 0
+/move_group/planning_pipelines/ompl/planner_configs/BKPIECE/border_fraction: 0.9
+/move_group/planning_pipelines/ompl/planner_configs/BKPIECE/failed_expansion_score_factor: 0.5
+/move_group/planning_pipelines/ompl/planner_configs/BKPIECE/min_valid_path_fraction: 0.5
+/move_group/planning_pipelines/ompl/planner_configs/BKPIECE/range: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/BKPIECE/type: geometric::BKPIECE
+/move_group/planning_pipelines/ompl/planner_configs/BiEST/range: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/BiEST/type: geometric::BiEST
+/move_group/planning_pipelines/ompl/planner_configs/BiTRRT/cost_threshold: 1e300
+/move_group/planning_pipelines/ompl/planner_configs/BiTRRT/frontier_node_ratio: 0.1
+/move_group/planning_pipelines/ompl/planner_configs/BiTRRT/frontier_threshold: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/BiTRRT/init_temperature: 100
+/move_group/planning_pipelines/ompl/planner_configs/BiTRRT/range: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/BiTRRT/temp_change_factor: 0.1
+/move_group/planning_pipelines/ompl/planner_configs/BiTRRT/type: geometric::BiTRRT
+/move_group/planning_pipelines/ompl/planner_configs/EST/goal_bias: 0.05
+/move_group/planning_pipelines/ompl/planner_configs/EST/range: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/EST/type: geometric::EST
+/move_group/planning_pipelines/ompl/planner_configs/FMT/cache_cc: 1
+/move_group/planning_pipelines/ompl/planner_configs/FMT/extended_fmt: 1
+/move_group/planning_pipelines/ompl/planner_configs/FMT/heuristics: 0
+/move_group/planning_pipelines/ompl/planner_configs/FMT/nearest_k: 1
+/move_group/planning_pipelines/ompl/planner_configs/FMT/num_samples: 1000
+/move_group/planning_pipelines/ompl/planner_configs/FMT/radius_multiplier: 1.1
+/move_group/planning_pipelines/ompl/planner_configs/FMT/type: geometric::FMT
+/move_group/planning_pipelines/ompl/planner_configs/KPIECE/border_fraction: 0.9
+/move_group/planning_pipelines/ompl/planner_configs/KPIECE/failed_expansion_score_factor: 0.5
+/move_group/planning_pipelines/ompl/planner_configs/KPIECE/goal_bias: 0.05
+/move_group/planning_pipelines/ompl/planner_configs/KPIECE/min_valid_path_fraction: 0.5
+/move_group/planning_pipelines/ompl/planner_configs/KPIECE/range: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/KPIECE/type: geometric::KPIECE
+/move_group/planning_pipelines/ompl/planner_configs/LBKPIECE/border_fraction: 0.9
+/move_group/planning_pipelines/ompl/planner_configs/LBKPIECE/min_valid_path_fraction: 0.5
+/move_group/planning_pipelines/ompl/planner_configs/LBKPIECE/range: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/LBKPIECE/type: geometric::LBKPIECE
+/move_group/planning_pipelines/ompl/planner_configs/LBTRRT/epsilon: 0.4
+/move_group/planning_pipelines/ompl/planner_configs/LBTRRT/goal_bias: 0.05
+/move_group/planning_pipelines/ompl/planner_configs/LBTRRT/range: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/LBTRRT/type: geometric::LBTRRT
+/move_group/planning_pipelines/ompl/planner_configs/LazyPRM/range: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/LazyPRM/type: geometric::LazyPRM
+/move_group/planning_pipelines/ompl/planner_configs/LazyPRMstar/type: geometric::LazyPRMstar
+/move_group/planning_pipelines/ompl/planner_configs/PDST/type: geometric::PDST
+/move_group/planning_pipelines/ompl/planner_configs/PRM/max_nearest_neighbors: 10
+/move_group/planning_pipelines/ompl/planner_configs/PRM/type: geometric::PRM
+/move_group/planning_pipelines/ompl/planner_configs/PRMstar/type: geometric::PRMstar
+/move_group/planning_pipelines/ompl/planner_configs/ProjEST/goal_bias: 0.05
+/move_group/planning_pipelines/ompl/planner_configs/ProjEST/range: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/ProjEST/type: geometric::ProjEST
+/move_group/planning_pipelines/ompl/planner_configs/RRT/goal_bias: 0.05
+/move_group/planning_pipelines/ompl/planner_configs/RRT/range: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/RRT/type: geometric::RRT
+/move_group/planning_pipelines/ompl/planner_configs/RRTConnect/range: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/RRTConnect/type: geometric::RRTConnect
+/move_group/planning_pipelines/ompl/planner_configs/RRTstar/delay_collision_checking: 1
+/move_group/planning_pipelines/ompl/planner_configs/RRTstar/goal_bias: 0.05
+/move_group/planning_pipelines/ompl/planner_configs/RRTstar/range: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/RRTstar/type: geometric::RRTstar
+/move_group/planning_pipelines/ompl/planner_configs/SBL/range: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/SBL/type: geometric::SBL
+/move_group/planning_pipelines/ompl/planner_configs/SPARS/dense_delta_fraction: 0.001
+/move_group/planning_pipelines/ompl/planner_configs/SPARS/max_failures: 1000
+/move_group/planning_pipelines/ompl/planner_configs/SPARS/sparse_delta_fraction: 0.25
+/move_group/planning_pipelines/ompl/planner_configs/SPARS/stretch_factor: 3.0
+/move_group/planning_pipelines/ompl/planner_configs/SPARS/type: geometric::SPARS
+/move_group/planning_pipelines/ompl/planner_configs/SPARStwo/dense_delta_fraction: 0.001
+/move_group/planning_pipelines/ompl/planner_configs/SPARStwo/max_failures: 5000
+/move_group/planning_pipelines/ompl/planner_configs/SPARStwo/sparse_delta_fraction: 0.25
+/move_group/planning_pipelines/ompl/planner_configs/SPARStwo/stretch_factor: 3.0
+/move_group/planning_pipelines/ompl/planner_configs/SPARStwo/type: geometric::SPARStwo
+/move_group/planning_pipelines/ompl/planner_configs/STRIDE/degree: 16
+/move_group/planning_pipelines/ompl/planner_configs/STRIDE/estimated_dimension: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/STRIDE/goal_bias: 0.05
+/move_group/planning_pipelines/ompl/planner_configs/STRIDE/max_degree: 18
+/move_group/planning_pipelines/ompl/planner_configs/STRIDE/max_pts_per_leaf: 6
+/move_group/planning_pipelines/ompl/planner_configs/STRIDE/min_degree: 12
+/move_group/planning_pipelines/ompl/planner_configs/STRIDE/min_valid_path_fraction: 0.2
+/move_group/planning_pipelines/ompl/planner_configs/STRIDE/range: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/STRIDE/type: geometric::STRIDE
+/move_group/planning_pipelines/ompl/planner_configs/STRIDE/use_projected_distance: 0
+/move_group/planning_pipelines/ompl/planner_configs/TRRT/frontier_node_ratio: 0.1
+/move_group/planning_pipelines/ompl/planner_configs/TRRT/frontier_threshold: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/TRRT/goal_bias: 0.05
+/move_group/planning_pipelines/ompl/planner_configs/TRRT/init_temperature: 10e-6
+/move_group/planning_pipelines/ompl/planner_configs/TRRT/k_constant: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/TRRT/max_states_failed: 10
+/move_group/planning_pipelines/ompl/planner_configs/TRRT/min_temperature: 10e-10
+/move_group/planning_pipelines/ompl/planner_configs/TRRT/range: 0.0
+/move_group/planning_pipelines/ompl/planner_configs/TRRT/temp_change_factor: 2.0
+/move_group/planning_pipelines/ompl/planner_configs/TRRT/type: geometric::TRRT
+/move_group/planning_pipelines/ompl/planning_plugin: ompl_interface/OMPLPlanner
+/move_group/planning_pipelines/ompl/request_adapters: default_planner_request_adapters/LimitMaxCartesianLinkSpeed                 default_planner_request_adapters/AddTimeParameterization                 default_planner_request_adapters/ResolveConstraintFrames                 default_planner_request_adapters/FixWorkspaceBounds                 default_planner_request_adapters/FixStartStateBounds                 default_planner_request_adapters/FixStartStateCollision                 default_planner_request_adapters/FixStartStatePathConstraints
+/move_group/planning_pipelines/ompl/start_state_max_bounds_error: 0.1
+/move_group/planning_pipelines/ompl/tripp_arm/planner_configs:
+- AnytimePathShortening
+- SBL
+- EST
+- LBKPIECE
+- BKPIECE
+- KPIECE
+- RRT
+- RRTConnect
+- RRTstar
+- TRRT
+- PRM
+- PRMstar
+- FMT
+- BFMT
+- PDST
+- STRIDE
+- BiTRRT
+- LBTRRT
+- BiEST
+- ProjEST
+- LazyPRM
+- LazyPRMstar
+- SPARS
+- SPARStwo
+- AITstar
+- ABITstar
+- BITstar
+/move_group/planning_pipelines/pilz_industrial_motion_planner/capabilities: pilz_industrial_motion_planner/MoveGroupSequenceAction                                     pilz_industrial_motion_planner/MoveGroupSequenceService
+/move_group/planning_pipelines/pilz_industrial_motion_planner/default_planner_config: PTP
+/move_group/planning_pipelines/pilz_industrial_motion_planner/planning_plugin: pilz_industrial_motion_planner::CommandPlanner
+/move_group/planning_pipelines/pilz_industrial_motion_planner/request_adapters: ''
+/move_group/planning_scene_monitor/publish_geometry_updates: true
+/move_group/planning_scene_monitor/publish_planning_scene: true
+/move_group/planning_scene_monitor/publish_state_updates: true
+/move_group/planning_scene_monitor/publish_transforms_updates: true
+/move_group/sense_for_plan/max_safe_path_cost: 1
+/move_group/trajectory_execution/allowed_execution_duration_scaling: 1.2
+/move_group/trajectory_execution/allowed_goal_duration_margin: 0.5
+/move_group/trajectory_execution/allowed_start_tolerance: 0.01
+/move_group/tripp_position_controller/gains/joint0/d: 1
+/move_group/tripp_position_controller/gains/joint0/i: 1
+/move_group/tripp_position_controller/gains/joint0/i_clamp: 1
+/move_group/tripp_position_controller/gains/joint0/p: 100
+/move_group/tripp_position_controller/gains/joint1/d: 1
+/move_group/tripp_position_controller/gains/joint1/i: 1
+/move_group/tripp_position_controller/gains/joint1/i_clamp: 1
+/move_group/tripp_position_controller/gains/joint1/p: 100
+/move_group/tripp_position_controller/gains/joint2/d: 1
+/move_group/tripp_position_controller/gains/joint2/i: 1
+/move_group/tripp_position_controller/gains/joint2/i_clamp: 1
+/move_group/tripp_position_controller/gains/joint2/p: 100
+/move_group/tripp_position_controller/gains/joint3/d: 1
+/move_group/tripp_position_controller/gains/joint3/i: 1
+/move_group/tripp_position_controller/gains/joint3/i_clamp: 1
+/move_group/tripp_position_controller/gains/joint3/p: 100
+/move_group/tripp_position_controller/joints:
+- joint0
+- joint1
+- joint2
+- joint3
+/move_group/tripp_position_controller/type: position_controllers/JointTrajectoryController
+/moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+/robot_description: "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n<robot name=\"tripp\"\
+  >\n    <!-- DESCIPTION OF PLANAR 3DOF ROBOT -->\n    <!-- LINK DESCRIPTIONS -->\n\
+  \    <link name=\"world\" />\n    <!-- PRISMATIC LINK (base_link) -->\n    <link\
+  \ name=\"linkb\">\n        <inertial>\n            <origin xyz=\"-0.02 0 0.02\"\
+  \ rpy=\"0 0 0\" />\n            <mass value=\"0.4\" />\n            <inertia ixx=\"\
+  0.000425\" ixy=\"0\" ixz=\"0\" iyy=\"0.000425\" iyz=\"0\" izz=\"0.000425\" />\n\
+  \        </inertial>\n        <visual>\n            <origin xyz=\"-0.02 0 0.02\"\
+  \ rpy=\"0 0 0\" />\n            <geometry>\n                <box size=\"0.04 0.04\
+  \ 0.04\" />\n            </geometry>\n            <material name=\"Cyan\">\n   \
+  \             <color rgba=\"0 1.0 1.0 1.0\" />\n            </material>\n      \
+  \  </visual>\n        <collision>\n            <origin xyz=\"-0.02 0 0.02\" rpy=\"\
+  0 0 0\" />\n            <geometry>\n                <box size=\"0.04 0.04 0.04\"\
+  \ />\n            </geometry>\n        </collision>\n    </link>\n    <!-- FIRST\
+  \ LINK (LINKB) -->\n    <!-- BASE LINK (LINK_0) -->\n    <link name=\"link1\">\n\
+  \        <inertial>\n            <origin xyz=\"0.04 0 0.02\" rpy=\"0 0 0\" />\n\
+  \            <mass value=\"0.4\" />\n            <inertia ixx=\"0.000425\" ixy=\"\
+  0\" ixz=\"0\" iyy=\"0.000425\" iyz=\"0\" izz=\"0.000425\" />\n        </inertial>\n\
+  \        <visual>\n            <origin xyz=\"0.04 0 0.02\" rpy=\"0 0 0\" />\n  \
+  \          <geometry>\n                <box size=\"0.08 0.04 0.04\" />\n       \
+  \     </geometry>\n            <material name=\"Cyan\">\n                <color\
+  \ rgba=\"0 1.0 1.0 1.0\" />\n            </material>\n        </visual>\n      \
+  \  <collision>\n            <origin xyz=\"0.04 0 0.02\" rpy=\"0 0 0\" />\n     \
+  \       <geometry>\n                <box size=\"0.08 0.04 0.04\" />\n          \
+  \  </geometry>\n        </collision>\n    </link>\n    <!-- FIRST LINK (LINK_1)\
+  \ -->\n    <link name=\"link2\">\n        <inertial>\n            <origin xyz=\"\
+  0 0 .10\" rpy=\"0 0 0\" />\n            <mass value=\"4\" />\n            <inertia\
+  \ ixx=\"0.00133\" ixy=\"0\" ixz=\"0\" iyy=\"0.00133\" iyz=\"0\" izz=\"0.00000664\"\
+  \ />\n        </inertial>\n        <visual>\n            <origin xyz=\"0 0 .10\"\
+  \ rpy=\"0 0 0\" />\n            <geometry>\n                <box size=\"0.01 0.01\
+  \ .20\" />\n            </geometry>\n            <material name=\"Cyan\">\n    \
+  \            <color rgba=\"0 1.0 1.0 1.0\" />\n            </material>\n       \
+  \ </visual>\n        <collision>\n            <origin xyz=\"0 0 .10\" rpy=\"0 0\
+  \ 0\" />\n            <geometry>\n                <box size=\"0.00001 0.0001 0.001\"\
+  \ />\n            </geometry>\n        </collision>\n    </link>\n    <!-- 2ND LINK\
+  \ (LINK_2)  -->\n    <link name=\"link3\">\n        <inertial>\n            <origin\
+  \ xyz=\"0 0 0.075\" rpy=\"0 0 0\" />\n            <mass value=\"0.4\" />\n     \
+  \       <inertia ixx=\"0.00075\" ixy=\"0\" ixz=\"0\" iyy=\"0.00075\" iyz=\"0\" izz=\"\
+  0.00000664\" />\n        </inertial>\n        <visual>\n            <origin xyz=\"\
+  0 0 0.075\" rpy=\"0 0 0\" />\n            <geometry>\n                <box size=\"\
+  0.01 0.01 .15\" />\n            </geometry>\n            <material name=\"Cyan\"\
+  >\n                <color rgba=\"0 1.0 1.0 1.0\" />\n            </material>\n \
+  \       </visual>\n        <collision>\n            <origin xyz=\"0 0 .075\" rpy=\"\
+  0 0 0\" />\n            <geometry>\n                <box size=\"0 0 0.01\" />\n\
+  \            </geometry>\n        </collision>\n    </link>\n    <!-- 3RD LINK (LINK_3)\
+  \  -->\n    <link name=\"link4\">\n        <inertial>\n            <origin xyz=\"\
+  0 0 0.025\" rpy=\"0 0 0\" />\n            <mass value=\"0.4\" />\n            <inertia\
+  \ ixx=\"0.00075\" ixy=\"0\" ixz=\"0\" iyy=\"0.00075\" iyz=\"0\" izz=\"0.00000664\"\
+  \ />\n        </inertial>\n        <visual>\n            <origin xyz=\"0 0 0.025\"\
+  \ rpy=\"0 0 0\" />\n            <geometry>\n                <box size=\"0.01 0.01\
+  \ 0.05\" />\n            </geometry>\n            <material name=\"Cyan\">\n   \
+  \             <color rgba=\"0 1.0 1.0 1.0\" />\n            </material>\n      \
+  \  </visual>\n        <collision>\n            <origin xyz=\"0 0 .025\" rpy=\"0\
+  \ 0 0\" />\n            <geometry>\n                <box size=\"0 0 0.01\" />\n\
+  \            </geometry>\n        </collision>\n    </link>\n    <!-- JOINT DESCIRPTIONS\
+  \ -->\n    <!-- WORLD JOINT ( LINKS BASE TO WORLD ) -->\n    <joint name=\"fixed\"\
+  \ type=\"fixed\">\n        <parent link=\"world\" />\n        <child link=\"linkb\"\
+  \ />\n    </joint>\n    <!-- PRISMATIC JOINT (JOINT)0 -->\n    <joint name=\"joint0\"\
+  \ type=\"prismatic\">\n        <parent link=\"linkb\" />\n        <child link=\"\
+  link1\" />\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n        <axis xyz=\"\
+  1 0 0\" />\n        <limit lower=\"0\" upper=\"1\" effort=\"100\" velocity=\"1.0\"\
+  \ />\n    </joint>\n    <!-- FIRST JOINT (JOINT_1) -->\n    <joint name=\"joint1\"\
+  \ type=\"revolute\">\n        <parent link=\"link1\" />\n        <child link=\"\
+  link2\" />\n        <origin xyz=\"0.04 0 0.04\" rpy=\"0 0 0\" />\n        <axis\
+  \ xyz=\"1 0 0\" />\n        <limit lower=\"-1.571\" upper=\"1.571\" effort=\"100\"\
+  \ velocity=\"1.0\" />\n    </joint>\n    <!-- SECOND JOINT (JOINT_2) -->\n    <joint\
+  \ name=\"joint2\" type=\"revolute\">\n        <parent link=\"link2\" />\n      \
+  \  <child link=\"link3\" />\n        <origin xyz=\"0 0 .20\" rpy=\"0 0 0\" />\n\
+  \        <axis xyz=\"1 0 0\" />\n        <limit lower=\"-2.8\" upper=\"2.8\" effort=\"\
+  100\" velocity=\"1.0\" />\n    </joint>\n    <!-- THIRD JOINT (JOINT_3) -->\n  \
+  \  <joint name=\"joint3\" type=\"revolute\">\n        <parent link=\"link3\" />\n\
+  \        <child link=\"link4\" />\n        <origin xyz=\"0 0 .15\" rpy=\"0 0 0\"\
+  \ />\n        <axis xyz=\"1 0 0\" />\n        <limit lower=\"-2.8\" upper=\"2.8\"\
+  \ effort=\"100\" velocity=\"1.0\" />\n    </joint>\n    <!-- GAZEBO PLUGINS -->\n\
+  \    <!-- <gazebo>\n        <plugin name=\"gazebo_ros_control\" filename=\"libgazebo_ros_control.so\"\
+  >\n            <robotNamespace>tripp</robotNamespace>\n        </plugin>\n    </gazebo>\
+  \ -->\n    <!-- TRANSMISSION BLOCKS FOR ROS_CONTROL -->\n    <transmission name=\"\
+  tran0\">\n        <type>transmission_interface/SimpleTransmission</type>\n     \
+  \   <joint name=\"joint0\">\n            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n\
+  \        </joint>\n        <actuator name=\"motor0\">\n            <hardwareInterface>PositionJointInterface</hardwareInterface>\n\
+  \            <mechanicalReduction>1</mechanicalReduction>\n        </actuator>\n\
+  \    </transmission>\n    <transmission name=\"tran1\">\n        <type>transmission_interface/SimpleTransmission</type>\n\
+  \        <joint name=\"joint1\">\n            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n\
+  \        </joint>\n        <actuator name=\"motor1\">\n            <hardwareInterface>PositionJointInterface</hardwareInterface>\n\
+  \            <mechanicalReduction>1</mechanicalReduction>\n        </actuator>\n\
+  \    </transmission>\n    <transmission name=\"tran2\">\n        <type>transmission_interface/SimpleTransmission</type>\n\
+  \        <joint name=\"joint2\">\n            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n\
+  \        </joint>\n        <actuator name=\"motor2\">\n            <hardwareInterface>PositionJointInterface</hardwareInterface>\n\
+  \            <mechanicalReduction>1</mechanicalReduction>\n        </actuator>\n\
+  \    </transmission>\n    <transmission name=\"tran3\">\n        <type>transmission_interface/SimpleTransmission</type>\n\
+  \        <joint name=\"joint3\">\n            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n\
+  \        </joint>\n        <actuator name=\"motor3\">\n            <hardwareInterface>PositionJointInterface</hardwareInterface>\n\
+  \            <mechanicalReduction>1</mechanicalReduction>\n        </actuator>\n\
+  \    </transmission>\n    <gazebo>\n        <plugin name=\"gazebo_ros_control\"\
+  \ filename=\"libgazebo_ros_control.so\">\n            <robotNamespace>/</robotNamespace>\n\
+  \        </plugin>\n    </gazebo>\n</robot>\n\n"
+/robot_description_kinematics/tripp_arm/goal_joint_tolerance: 0.0001
+/robot_description_kinematics/tripp_arm/goal_orientation_tolerance: 0.001
+/robot_description_kinematics/tripp_arm/goal_position_tolerance: 0.0001
+/robot_description_kinematics/tripp_arm/kinematics_solver: kdl_kinematics_plugin/KDLKinematicsPlugin
+/robot_description_kinematics/tripp_arm/kinematics_solver_search_resolution: 0.005
+/robot_description_kinematics/tripp_arm/kinematics_solver_timeout: 0.005
+/robot_description_planning/cartesian_limits/max_rot_vel: 1.57
+/robot_description_planning/cartesian_limits/max_trans_acc: 2.25
+/robot_description_planning/cartesian_limits/max_trans_dec: -5
+/robot_description_planning/cartesian_limits/max_trans_vel: 1
+/robot_description_planning/default_acceleration_scaling_factor: 0.1
+/robot_description_planning/default_velocity_scaling_factor: 0.1
+/robot_description_planning/joint_limits/joint0/has_acceleration_limits: false
+/robot_description_planning/joint_limits/joint0/has_velocity_limits: true
+/robot_description_planning/joint_limits/joint0/max_acceleration: 0
+/robot_description_planning/joint_limits/joint0/max_velocity: 1
+/robot_description_planning/joint_limits/joint1/has_acceleration_limits: false
+/robot_description_planning/joint_limits/joint1/has_velocity_limits: true
+/robot_description_planning/joint_limits/joint1/max_acceleration: 0
+/robot_description_planning/joint_limits/joint1/max_velocity: 1
+/robot_description_planning/joint_limits/joint2/has_acceleration_limits: false
+/robot_description_planning/joint_limits/joint2/has_velocity_limits: true
+/robot_description_planning/joint_limits/joint2/max_acceleration: 0
+/robot_description_planning/joint_limits/joint2/max_velocity: 1
+/robot_description_planning/joint_limits/joint3/has_acceleration_limits: false
+/robot_description_planning/joint_limits/joint3/has_velocity_limits: true
+/robot_description_planning/joint_limits/joint3/max_acceleration: 0
+/robot_description_planning/joint_limits/joint3/max_velocity: 1
+/robot_description_semantic: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!--This\
+  \ does not replace URDF, and is not an extension of URDF.\n    This is a format\
+  \ for representing semantic information about the robot structure.\n    A URDF file\
+  \ must exist for this robot as well, where the joints and the links that are referenced\
+  \ are defined\n-->\n<robot name=\"tripp\">\n    <!--GROUPS: Representation of a\
+  \ set of joints and links. This can be useful for specifying DOF to plan for, defining\
+  \ arms, end effectors, etc-->\n    <!--LINKS: When a link is specified, the parent\
+  \ joint of that link (if it exists) is automatically included-->\n    <!--JOINTS:\
+  \ When a joint is specified, the child link of that joint (which will always exist)\
+  \ is automatically included-->\n    <!--CHAINS: When a chain is specified, all the\
+  \ links along the chain (including endpoints) are included in the group. Additionally,\
+  \ all the joints that are parents to included links are also included. This means\
+  \ that joints along the chain and the parent joint of the base link are included\
+  \ in the group-->\n    <!--SUBGROUPS: Groups can also be formed by referencing to\
+  \ already defined group names-->\n    <group name=\"tripp_arm\">\n        <joint\
+  \ name=\"virtual_joint\"/>\n        <joint name=\"fixed\"/>\n        <joint name=\"\
+  joint0\"/>\n        <joint name=\"joint1\"/>\n        <joint name=\"joint2\"/>\n\
+  \        <joint name=\"joint3\"/>\n    </group>\n    <group name=\"gripper\">\n\
+  \        <link name=\"link4\"/>\n    </group>\n    <!--GROUP STATES: Purpose: Define\
+  \ a named state for a particular group, in terms of joint values. This is useful\
+  \ to define states like 'folded arms'-->\n    <group_state name=\"home\" group=\"\
+  tripp_arm\">\n        <joint name=\"joint0\" value=\"0\"/>\n        <joint name=\"\
+  joint1\" value=\"0.5752\"/>\n        <joint name=\"joint2\" value=\"1.2699\"/>\n\
+  \        <joint name=\"joint3\" value=\"1.2087\"/>\n    </group_state>\n    <!--END\
+  \ EFFECTOR: Purpose: Represent information about an end effector.-->\n    <end_effector\
+  \ name=\"gripper\" parent_link=\"link3\" group=\"gripper\"/>\n    <!--VIRTUAL JOINT:\
+  \ Purpose: this element defines a virtual joint between a robot link and an external\
+  \ frame of reference (considered fixed with respect to the robot)-->\n    <virtual_joint\
+  \ name=\"virtual_joint\" type=\"fixed\" parent_frame=\"world\" child_link=\"linkb\"\
+  />\n    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot\
+  \ could potentially come into collision with any other link in the robot. This tag\
+  \ disables collision checking between a specified pair of links. -->\n    <disable_collisions\
+  \ link1=\"link1\" link2=\"link2\" reason=\"Adjacent\"/>\n    <disable_collisions\
+  \ link1=\"link1\" link2=\"link3\" reason=\"Never\"/>\n    <disable_collisions link1=\"\
+  link1\" link2=\"link4\" reason=\"Never\"/>\n    <disable_collisions link1=\"link1\"\
+  \ link2=\"linkb\" reason=\"Adjacent\"/>\n    <disable_collisions link1=\"link2\"\
+  \ link2=\"link3\" reason=\"Adjacent\"/>\n    <disable_collisions link1=\"link2\"\
+  \ link2=\"link4\" reason=\"Never\"/>\n    <disable_collisions link1=\"link2\" link2=\"\
+  linkb\" reason=\"Never\"/>\n    <disable_collisions link1=\"link3\" link2=\"link4\"\
+  \ reason=\"Adjacent\"/>\n    <disable_collisions link1=\"link3\" link2=\"linkb\"\
+  \ reason=\"Never\"/>\n    <disable_collisions link1=\"link4\" link2=\"linkb\" reason=\"\
+  Never\"/>\n</robot>\n"
+/trajectory_execution/execution_duration_monitoring: true
+/tripp_arm_controller/joints:
+- joint0
+- joint1
+- joint2
+- joint3
+- null
+/tripp_arm_controller/type: position_controllers/JointTrajectoryController
+/use_controller_manager: true
+

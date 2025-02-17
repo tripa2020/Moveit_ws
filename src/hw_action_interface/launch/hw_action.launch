@@ -1,0 +1,5 @@
+<launch>
+
+ <node name="robot_driver" pkg="hw_action_interface" type="traj_action" output="screen"/>
+
+</launch>

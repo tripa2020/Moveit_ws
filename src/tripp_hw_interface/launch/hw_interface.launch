@@ -1,0 +1,33 @@
+<!-- Loads the followJointTrajectory controller -->
+
+<launch>
+ <param name="robot_description" command="cat $(find tripp_description)/urdf/tripp.urdf" />
+
+ <!-- Load joint controller configurations from YAML file to parameter server -->
+ <rosparam file="$(find tripp_hw_interface)/config/joint_trajectory_control.yaml" command="load"/>
+ <!-- Launch your hw_interface node -->
+   
+  <!-- <node name="hw_interface" pkg="tripp_hw_interface" type="hw_tr" output="screen"/> -->
+
+ 
+ <!-- load the controllers -->
+ <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+       output="screen" args=" tripp_arm_controller joint_state_controller "/>
+         
+
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
+  
+  <!-- hardware interface already publishes to /joint_states -->
+  <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" ></node> -->
+
+ <node name="hw_interface" pkg="tripp_hw_interface" type="hw_tr" output="screen"/>
+
+
+
+ <!-- convert joint states to TF transforms for rviz, etc -->
+
+ <!-- <node name="hw_interface" pkg="testbot_hw_interface" type="hw" output="screen"/> -->
+
+
+</launch>

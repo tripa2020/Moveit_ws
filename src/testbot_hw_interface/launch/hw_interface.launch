@@ -1,0 +1,29 @@
+<!-- Loads the followJointTrajectory controller -->
+
+<launch>
+ 
+
+ <!-- Load joint controller configurations from YAML file to parameter server -->
+ <rosparam file="$(find testbot_hw_interface)/config/jnt_trajectory_control.yaml" command="load"/>
+
+ <!-- Launch your hw_interface node -->
+   
+  <node name="hw_interface" pkg="testbot_hw_interface" type="hw" output="screen"/>
+
+ 
+ <!-- load the controllers -->
+ <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+       output="screen" args=" test_controller joint_state_controller "/>
+         
+ 
+
+
+ <!-- convert joint states to TF transforms for rviz, etc -->
+ <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+       respawn="false" output="screen">
+ </node>
+
+ <!-- <node name="hw_interface" pkg="testbot_hw_interface" type="hw" output="screen"/> -->
+
+
+</launch>

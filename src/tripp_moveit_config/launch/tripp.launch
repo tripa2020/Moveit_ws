@@ -1,0 +1,70 @@
+<launch>
+    <!-- launching the hardware interface node and the robot hardware interface -->
+  <include file="$(find tripp_hw_interface)/launch/hw_interface.launch"/>
+
+
+  <!-- specify the planning pipeline -->
+  <arg name="pipeline" default="chomp" />
+
+  <!-- By default, we do not start a database (it can be large) -->
+  <arg name="db" default="false" />
+  <!-- Allow user to specify database location -->
+  <arg name="db_path" default="$(find tripp_moveit_config)/default_warehouse_mongo_db" />
+
+  <!-- By default, we are not in debug mode -->
+  <arg name="debug" default="false" />
+
+  <!-- By default, we will load or override the robot_description -->
+  <arg name="load_robot_description" default="false"/>
+
+  <!-- Choose controller manager: fake, simple, or ros_control -->
+  <arg name="moveit_controller_manager" value="simple"/>
+  <!-- Set execution mode for fake execution controllers -->
+
+  <!-- By default, hide joint_state_publisher's GUI in 'fake' controller_manager mode -->
+  <arg name="use_gui" default="true" />
+  <arg name="use_rviz" default="true" />
+
+  <!-- If needed, broadcast static tf for robot root -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="tf_2" args="0 0 0 0 0 0 1 world linkb" />
+
+  <!-- _____________Controller Configuration_____________ -->
+      
+      <!-- Load the default controllers -->
+  <rosparam file="$(find tripp_moveit_config)/config/simple_moveit_controllers.yaml" command="load"/>
+      <!-- Start the moveit controll manager -->
+  <param name="use_controller_manager" value="true"/>
+  <param name="trajectory_execution/execution_duration_monitoring" value="true"/>
+  <param name="moveit_controller_manager" value="moveit_simple_controller_manager/MoveItSimpleControllerManager"/>
+      <!-- Start the move_group node  -->   
+<!-- _____________Controller Configuration_____________ -->
+
+  <!-- Run the main MoveIt executable without trajectory execution (we do not have controllers configured by default) -->
+  <!-- <node name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" if="$(arg use_gui)">
+      <rosparam param="source_list">[move_group/fake_controller_joint_states]</rosparam>
+  </node> -->
+
+  
+  <include file="$(dirname)/move_group.launch">
+  <arg name="allow_trajectory_execution" value="true"/>
+  <arg name="moveit_controller_manager" value="$(arg moveit_controller_manager)" />
+  <arg name="fake_execution_type" value="false"/> <!-- Disable fake execution -->
+  <arg name="info" value="true"/>
+  <arg name="debug" value="$(arg debug)"/>
+  <arg name="pipeline" value="$(arg pipeline)"/>
+  <arg name="load_robot_description" value="false"/> <!-- Prevent overriding -->
+</include>
+   
+
+  <!-- Run Rviz and load the default config to see the state of the move_group node -->
+  <include file="$(dirname)/moveit_rviz.launch" if="$(arg use_rviz)">
+    <arg name="rviz_config" value="$(dirname)/moveit.rviz"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+
+  <!-- If database loading was enabled, start mongodb as well -->
+  <include file="$(dirname)/default_warehouse_db.launch" if="$(arg db)">
+    <arg name="moveit_warehouse_database_path" value="$(arg db_path)"/>
+  </include>
+
+</launch>

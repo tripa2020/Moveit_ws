@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<robot name="test">
+    <!-- DESCIPTION OF PLANAR 3DOF ROBOT -->
+    <!-- LINK DESCRIPTIONS -->
+    <link name="world" />
+    <!-- BASE LINK (LINK_0) -->
+    <link name="link0">
+        <inertial>
+            <origin xyz="0 0 0.4" rpy="0 0 0" />
+            <mass value="0.4" />
+            <inertia ixx="0.000425" ixy="0" ixz="0" iyy="0.000425" iyz="0" izz="0.000425" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.4" rpy="0 0 0" />
+            <geometry>
+                <box size="0.8 0.8 0.8" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.4" rpy="0 0 0" />
+            <geometry>
+                <box size="0.8 0.8 0.8" />
+            </geometry>
+        </collision>
+    </link>
+    <!-- FIRST LINK (LINK_1) -->
+    <link name="link1">
+        <inertial>
+            <origin xyz="0 0 1.0" rpy="0 0 0" />
+            <mass value="4" />
+            <inertia ixx="0.00133" ixy="0" ixz="0" iyy="0.00133" iyz="0" izz="0.00000664" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 1.0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 2.0" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 1.0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.00001 0.0001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <!-- 2ND LINK (LINK_2)  -->
+    <link name="link2">
+        <inertial>
+            <origin xyz="0 0 0.75" rpy="0 0 0" />
+            <mass value="0.4" />
+            <inertia ixx="0.00075" ixy="0" ixz="0" iyy="0.00075" iyz="0" izz="0.00000664" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.75" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 1.5" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 .75" rpy="0 0 0" />
+            <geometry>
+                <box size="0 0 0.01" />
+            </geometry>
+        </collision>
+    </link>
+    <!-- 2ND LINK (LINK_2)  -->
+    <link name="link3">
+        <inertial>
+            <origin xyz="0 0 0.25" rpy="0 0 0" />
+            <mass value="0.4" />
+            <inertia ixx="0.00075" ixy="0" ixz="0" iyy="0.00075" iyz="0" izz="0.00000664" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.25" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.5" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 .25" rpy="0 0 0" />
+            <geometry>
+                <box size="0 0 0.01" />
+            </geometry>
+        </collision>
+    </link>
+    <!-- JOINT DESCIRPTIONS -->
+    <!-- WORLD JOINT ( LINKS BASE TO WORLD ) -->
+    <joint name="fixed" type="fixed">
+        <parent link="world" />
+        <child link="link0" />
+    </joint>
+    <!-- FIRST JOINT (JOINT_0) -->
+    <joint name="joint1" type="revolute">
+        <parent link="link0" />
+        <child link="link1" />
+        <origin xyz="0 0 .8" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1.571" upper="1.571" effort="100" velocity="1.0" />
+    </joint>
+    <!-- SECOND JOINT (JOINT_2) -->
+    <joint name="joint2" type="revolute">
+        <parent link="link1" />
+        <child link="link2" />
+        <origin xyz="0 0 2.0" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1.571" upper="1.571" effort="100" velocity="1.0" />
+    </joint>
+    <!-- THIRD JOINT (JOINT_3) -->
+    <joint name="joint3" type="revolute">
+        <parent link="link2" />
+        <child link="link3" />
+        <origin xyz="0 0 1.5" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="-1.571" upper="1.571" effort="100" velocity="1.0" />
+    </joint>
+    <!-- GAZEBO PLUGINS -->
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>test</robotNamespace>
+        </plugin>
+    </gazebo>
+    <!-- TRANSMISSION BLOCKS FOR ROS_CONTROL -->
+    <transmission name="tran1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint1">
+            <hardwareInterface>hardware_interface/PositonJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor1">
+            <hardwareInterface>PositonJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="tran2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint2">
+            <hardwareInterface>hardware_interface/PositonJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor2">
+            <hardwareInterface>PositonJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="tran3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint3">
+            <hardwareInterface>hardware_interface/PositonJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor3">
+            <hardwareInterface>PositonJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+</robot>

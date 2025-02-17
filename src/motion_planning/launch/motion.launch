@@ -1,0 +1,14 @@
+<!-- Loads the followJointTrajectory controller -->
+
+<launch>
+ <arg name="arm_id" default="tripp_arm"/>
+
+ <node name="motion_planning" pkg="motion_planning" type="mo_pl" respawn="false" output="screen">
+  <rosparam command="load" file="$(find test_moveit_config)/config/kinematics.yaml" subst_value="true"/>
+  <param name="/planning_plugin" value="ompl_interface/OMPLPlanner"/>
+  <rosparam command="load" file="$(find test_moveit_config)/config/ompl_planning.yaml"/>
+ </node>
+         
+
+
+</launch>

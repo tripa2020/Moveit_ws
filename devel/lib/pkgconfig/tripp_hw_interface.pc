@@ -1,0 +1,8 @@
+prefix=/home/alex/moveit_ws/devel
+
+Name: tripp_hw_interface
+Description: Description of tripp_hw_interface
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

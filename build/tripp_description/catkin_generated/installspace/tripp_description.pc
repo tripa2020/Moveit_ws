@@ -1,0 +1,8 @@
+prefix=/home/alex/moveit_ws/install
+
+Name: tripp_description
+Description: Description of tripp_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

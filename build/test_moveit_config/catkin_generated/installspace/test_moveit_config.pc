@@ -1,0 +1,8 @@
+prefix=/home/alex/moveit_ws/install
+
+Name: test_moveit_config
+Description: Description of test_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

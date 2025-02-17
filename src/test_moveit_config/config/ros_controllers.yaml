@@ -1,0 +1,8 @@
+testbot_controller:
+  type: joint_trajectory_controller/JointTrajectoryController
+  default: True  
+  joints:
+    - joint1
+    - joint2
+    - joint3
+  

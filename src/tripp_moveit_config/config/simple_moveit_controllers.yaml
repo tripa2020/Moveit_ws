@@ -1,0 +1,11 @@
+controller_list:
+  - name: tripp_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - joint0
+      - joint1
+      - joint2
+      - joint3
+ 
