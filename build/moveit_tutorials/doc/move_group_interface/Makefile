@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/alex/moveit_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -135,6 +123,18 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/alex/moveit_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/alex/moveit_ws/build/CMakeFiles /home/alex/moveit_ws/build/moveit_tutorials/doc/move_group_interface/CMakeFiles/progress.marks
@@ -166,6 +166,36 @@ preinstall/fast:
 depend:
 	cd /home/alex/moveit_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_s_m.dir/rule:
+	cd /home/alex/moveit_ws/build && $(MAKE) -f CMakeFiles/Makefile2 moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_s_m.dir/rule
+.PHONY : moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_s_m.dir/rule
+
+# Convenience name for target.
+tripp_s_m: moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_s_m.dir/rule
+
+.PHONY : tripp_s_m
+
+# fast build rule for target.
+tripp_s_m/fast:
+	cd /home/alex/moveit_ws/build && $(MAKE) -f moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_s_m.dir/build.make moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_s_m.dir/build
+.PHONY : tripp_s_m/fast
+
+# Convenience name for target.
+moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_mv_grp_interface.dir/rule:
+	cd /home/alex/moveit_ws/build && $(MAKE) -f CMakeFiles/Makefile2 moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_mv_grp_interface.dir/rule
+.PHONY : moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_mv_grp_interface.dir/rule
+
+# Convenience name for target.
+tripp_mv_grp_interface: moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_mv_grp_interface.dir/rule
+
+.PHONY : tripp_mv_grp_interface
+
+# fast build rule for target.
+tripp_mv_grp_interface/fast:
+	cd /home/alex/moveit_ws/build && $(MAKE) -f moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_mv_grp_interface.dir/build.make moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_mv_grp_interface.dir/build
+.PHONY : tripp_mv_grp_interface/fast
 
 # Convenience name for target.
 moveit_tutorials/doc/move_group_interface/CMakeFiles/move_group_interface_tutorial.dir/rule:
@@ -209,23 +239,85 @@ src/move_group_interface_tutorial.cpp.s:
 	cd /home/alex/moveit_ws/build && $(MAKE) -f moveit_tutorials/doc/move_group_interface/CMakeFiles/move_group_interface_tutorial.dir/build.make moveit_tutorials/doc/move_group_interface/CMakeFiles/move_group_interface_tutorial.dir/src/move_group_interface_tutorial.cpp.s
 .PHONY : src/move_group_interface_tutorial.cpp.s
 
+src/tripp_move_group_interface_tutorial.o: src/tripp_move_group_interface_tutorial.cpp.o
+
+.PHONY : src/tripp_move_group_interface_tutorial.o
+
+# target to build an object file
+src/tripp_move_group_interface_tutorial.cpp.o:
+	cd /home/alex/moveit_ws/build && $(MAKE) -f moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_mv_grp_interface.dir/build.make moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_mv_grp_interface.dir/src/tripp_move_group_interface_tutorial.cpp.o
+.PHONY : src/tripp_move_group_interface_tutorial.cpp.o
+
+src/tripp_move_group_interface_tutorial.i: src/tripp_move_group_interface_tutorial.cpp.i
+
+.PHONY : src/tripp_move_group_interface_tutorial.i
+
+# target to preprocess a source file
+src/tripp_move_group_interface_tutorial.cpp.i:
+	cd /home/alex/moveit_ws/build && $(MAKE) -f moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_mv_grp_interface.dir/build.make moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_mv_grp_interface.dir/src/tripp_move_group_interface_tutorial.cpp.i
+.PHONY : src/tripp_move_group_interface_tutorial.cpp.i
+
+src/tripp_move_group_interface_tutorial.s: src/tripp_move_group_interface_tutorial.cpp.s
+
+.PHONY : src/tripp_move_group_interface_tutorial.s
+
+# target to generate assembly for a file
+src/tripp_move_group_interface_tutorial.cpp.s:
+	cd /home/alex/moveit_ws/build && $(MAKE) -f moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_mv_grp_interface.dir/build.make moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_mv_grp_interface.dir/src/tripp_move_group_interface_tutorial.cpp.s
+.PHONY : src/tripp_move_group_interface_tutorial.cpp.s
+
+src/tripp_move_group_state_machine.o: src/tripp_move_group_state_machine.cpp.o
+
+.PHONY : src/tripp_move_group_state_machine.o
+
+# target to build an object file
+src/tripp_move_group_state_machine.cpp.o:
+	cd /home/alex/moveit_ws/build && $(MAKE) -f moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_s_m.dir/build.make moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_s_m.dir/src/tripp_move_group_state_machine.cpp.o
+.PHONY : src/tripp_move_group_state_machine.cpp.o
+
+src/tripp_move_group_state_machine.i: src/tripp_move_group_state_machine.cpp.i
+
+.PHONY : src/tripp_move_group_state_machine.i
+
+# target to preprocess a source file
+src/tripp_move_group_state_machine.cpp.i:
+	cd /home/alex/moveit_ws/build && $(MAKE) -f moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_s_m.dir/build.make moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_s_m.dir/src/tripp_move_group_state_machine.cpp.i
+.PHONY : src/tripp_move_group_state_machine.cpp.i
+
+src/tripp_move_group_state_machine.s: src/tripp_move_group_state_machine.cpp.s
+
+.PHONY : src/tripp_move_group_state_machine.s
+
+# target to generate assembly for a file
+src/tripp_move_group_state_machine.cpp.s:
+	cd /home/alex/moveit_ws/build && $(MAKE) -f moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_s_m.dir/build.make moveit_tutorials/doc/move_group_interface/CMakeFiles/tripp_s_m.dir/src/tripp_move_group_state_machine.cpp.s
+.PHONY : src/tripp_move_group_state_machine.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... tripp_s_m"
+	@echo "... install/strip"
+	@echo "... tripp_mv_grp_interface"
 	@echo "... move_group_interface_tutorial"
 	@echo "... src/move_group_interface_tutorial.o"
 	@echo "... src/move_group_interface_tutorial.i"
 	@echo "... src/move_group_interface_tutorial.s"
+	@echo "... src/tripp_move_group_interface_tutorial.o"
+	@echo "... src/tripp_move_group_interface_tutorial.i"
+	@echo "... src/tripp_move_group_interface_tutorial.s"
+	@echo "... src/tripp_move_group_state_machine.o"
+	@echo "... src/tripp_move_group_state_machine.i"
+	@echo "... src/tripp_move_group_state_machine.s"
 .PHONY : help
 
 

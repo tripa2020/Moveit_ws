@@ -66,16 +66,6 @@
 },
 {
   "directory": "/home/alex/moveit_ws/build/rviz_visual_tools",
-  "command": "/usr/bin/c++  -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DQT_NO_KEYWORDS -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rviz_visual_tools\\\" -I/home/alex/moveit_ws/build/rviz_visual_tools -I/home/alex/moveit_ws/src/rviz_visual_tools -I/home/alex/moveit_ws/build/rviz_visual_tools/rviz_visual_tools_demo_autogen/include -isystem /home/alex/moveit_ws/src/rviz_visual_tools/include -isystem /opt/ros/noetic/include -isystem /opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/eigen3 -isystem /usr/include/OGRE/Overlay -isystem /usr/include/OGRE    -o CMakeFiles/rviz_visual_tools_demo.dir/rviz_visual_tools_demo_autogen/mocs_compilation.cpp.o -c /home/alex/moveit_ws/build/rviz_visual_tools/rviz_visual_tools_demo_autogen/mocs_compilation.cpp",
-  "file": "/home/alex/moveit_ws/build/rviz_visual_tools/rviz_visual_tools_demo_autogen/mocs_compilation.cpp"
-},
-{
-  "directory": "/home/alex/moveit_ws/build/rviz_visual_tools",
-  "command": "/usr/bin/c++  -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DQT_NO_KEYWORDS -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rviz_visual_tools\\\" -I/home/alex/moveit_ws/build/rviz_visual_tools -I/home/alex/moveit_ws/src/rviz_visual_tools -I/home/alex/moveit_ws/build/rviz_visual_tools/rviz_visual_tools_demo_autogen/include -isystem /home/alex/moveit_ws/src/rviz_visual_tools/include -isystem /opt/ros/noetic/include -isystem /opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/eigen3 -isystem /usr/include/OGRE/Overlay -isystem /usr/include/OGRE    -o CMakeFiles/rviz_visual_tools_demo.dir/src/rviz_visual_tools_demo.cpp.o -c /home/alex/moveit_ws/src/rviz_visual_tools/src/rviz_visual_tools_demo.cpp",
-  "file": "/home/alex/moveit_ws/src/rviz_visual_tools/src/rviz_visual_tools_demo.cpp"
-},
-{
-  "directory": "/home/alex/moveit_ws/build/rviz_visual_tools",
   "command": "/usr/bin/c++  -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DQT_NO_KEYWORDS -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rviz_visual_tools\\\" -I/home/alex/moveit_ws/build/rviz_visual_tools -I/home/alex/moveit_ws/src/rviz_visual_tools -I/home/alex/moveit_ws/build/rviz_visual_tools/rvt_test_autogen/include -isystem /home/alex/moveit_ws/src/rviz_visual_tools/include -isystem /opt/ros/noetic/include -isystem /opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/eigen3 -isystem /usr/include/OGRE/Overlay -isystem /usr/include/OGRE -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest    -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/rvt_test.dir/rvt_test_autogen/mocs_compilation.cpp.o -c /home/alex/moveit_ws/build/rviz_visual_tools/rvt_test_autogen/mocs_compilation.cpp",
   "file": "/home/alex/moveit_ws/build/rviz_visual_tools/rvt_test_autogen/mocs_compilation.cpp"
 },
@@ -83,5 +73,15 @@
   "directory": "/home/alex/moveit_ws/build/rviz_visual_tools",
   "command": "/usr/bin/c++  -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DQT_NO_KEYWORDS -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rviz_visual_tools\\\" -I/home/alex/moveit_ws/build/rviz_visual_tools -I/home/alex/moveit_ws/src/rviz_visual_tools -I/home/alex/moveit_ws/build/rviz_visual_tools/rvt_test_autogen/include -isystem /home/alex/moveit_ws/src/rviz_visual_tools/include -isystem /opt/ros/noetic/include -isystem /opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/eigen3 -isystem /usr/include/OGRE/Overlay -isystem /usr/include/OGRE -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest    -DGTEST_HAS_PTHREAD=1 -o CMakeFiles/rvt_test.dir/tests/rvt_test.cpp.o -c /home/alex/moveit_ws/src/rviz_visual_tools/tests/rvt_test.cpp",
   "file": "/home/alex/moveit_ws/src/rviz_visual_tools/tests/rvt_test.cpp"
+},
+{
+  "directory": "/home/alex/moveit_ws/build/rviz_visual_tools",
+  "command": "/usr/bin/c++  -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DQT_NO_KEYWORDS -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rviz_visual_tools\\\" -I/home/alex/moveit_ws/build/rviz_visual_tools -I/home/alex/moveit_ws/src/rviz_visual_tools -I/home/alex/moveit_ws/build/rviz_visual_tools/rviz_visual_tools_demo_autogen/include -isystem /home/alex/moveit_ws/src/rviz_visual_tools/include -isystem /opt/ros/noetic/include -isystem /opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/eigen3 -isystem /usr/include/OGRE/Overlay -isystem /usr/include/OGRE    -o CMakeFiles/rviz_visual_tools_demo.dir/rviz_visual_tools_demo_autogen/mocs_compilation.cpp.o -c /home/alex/moveit_ws/build/rviz_visual_tools/rviz_visual_tools_demo_autogen/mocs_compilation.cpp",
+  "file": "/home/alex/moveit_ws/build/rviz_visual_tools/rviz_visual_tools_demo_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "/home/alex/moveit_ws/build/rviz_visual_tools",
+  "command": "/usr/bin/c++  -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DQT_NO_KEYWORDS -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rviz_visual_tools\\\" -I/home/alex/moveit_ws/build/rviz_visual_tools -I/home/alex/moveit_ws/src/rviz_visual_tools -I/home/alex/moveit_ws/build/rviz_visual_tools/rviz_visual_tools_demo_autogen/include -isystem /home/alex/moveit_ws/src/rviz_visual_tools/include -isystem /opt/ros/noetic/include -isystem /opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/eigen3 -isystem /usr/include/OGRE/Overlay -isystem /usr/include/OGRE    -o CMakeFiles/rviz_visual_tools_demo.dir/src/rviz_visual_tools_demo.cpp.o -c /home/alex/moveit_ws/src/rviz_visual_tools/src/rviz_visual_tools_demo.cpp",
+  "file": "/home/alex/moveit_ws/src/rviz_visual_tools/src/rviz_visual_tools_demo.cpp"
 }
 ]

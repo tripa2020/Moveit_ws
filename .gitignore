@@ -1,0 +1,6 @@
+build/
+devel/
+install/
+*.swp
+*.log
+src/rosserial/

@@ -182,81 +182,6 @@ mo_pl/fast:
 	cd /home/alex/moveit_ws/build && $(MAKE) -f motion_planning/CMakeFiles/mo_pl.dir/build.make motion_planning/CMakeFiles/mo_pl.dir/build
 .PHONY : mo_pl/fast
 
-# Convenience name for target.
-motion_planning/CMakeFiles/topic_tools_generate_messages_py.dir/rule:
-	cd /home/alex/moveit_ws/build && $(MAKE) -f CMakeFiles/Makefile2 motion_planning/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-.PHONY : motion_planning/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_py: motion_planning/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-
-.PHONY : topic_tools_generate_messages_py
-
-# fast build rule for target.
-topic_tools_generate_messages_py/fast:
-	cd /home/alex/moveit_ws/build && $(MAKE) -f motion_planning/CMakeFiles/topic_tools_generate_messages_py.dir/build.make motion_planning/CMakeFiles/topic_tools_generate_messages_py.dir/build
-.PHONY : topic_tools_generate_messages_py/fast
-
-# Convenience name for target.
-motion_planning/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule:
-	cd /home/alex/moveit_ws/build && $(MAKE) -f CMakeFiles/Makefile2 motion_planning/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
-.PHONY : motion_planning/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_nodejs: motion_planning/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
-
-.PHONY : topic_tools_generate_messages_nodejs
-
-# fast build rule for target.
-topic_tools_generate_messages_nodejs/fast:
-	cd /home/alex/moveit_ws/build && $(MAKE) -f motion_planning/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make motion_planning/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
-.PHONY : topic_tools_generate_messages_nodejs/fast
-
-# Convenience name for target.
-motion_planning/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule:
-	cd /home/alex/moveit_ws/build && $(MAKE) -f CMakeFiles/Makefile2 motion_planning/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
-.PHONY : motion_planning/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_lisp: motion_planning/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
-
-.PHONY : topic_tools_generate_messages_lisp
-
-# fast build rule for target.
-topic_tools_generate_messages_lisp/fast:
-	cd /home/alex/moveit_ws/build && $(MAKE) -f motion_planning/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make motion_planning/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
-.PHONY : topic_tools_generate_messages_lisp/fast
-
-# Convenience name for target.
-motion_planning/CMakeFiles/topic_tools_generate_messages_eus.dir/rule:
-	cd /home/alex/moveit_ws/build && $(MAKE) -f CMakeFiles/Makefile2 motion_planning/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-.PHONY : motion_planning/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_eus: motion_planning/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-
-.PHONY : topic_tools_generate_messages_eus
-
-# fast build rule for target.
-topic_tools_generate_messages_eus/fast:
-	cd /home/alex/moveit_ws/build && $(MAKE) -f motion_planning/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make motion_planning/CMakeFiles/topic_tools_generate_messages_eus.dir/build
-.PHONY : topic_tools_generate_messages_eus/fast
-
-# Convenience name for target.
-motion_planning/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule:
-	cd /home/alex/moveit_ws/build && $(MAKE) -f CMakeFiles/Makefile2 motion_planning/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
-.PHONY : motion_planning/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_cpp: motion_planning/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
-
-.PHONY : topic_tools_generate_messages_cpp
-
-# fast build rule for target.
-topic_tools_generate_messages_cpp/fast:
-	cd /home/alex/moveit_ws/build && $(MAKE) -f motion_planning/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make motion_planning/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
-.PHONY : topic_tools_generate_messages_cpp/fast
-
 src/motion_planning_api.o: src/motion_planning_api.cpp.o
 
 .PHONY : src/motion_planning_api.o
@@ -295,14 +220,9 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... mo_pl"
-	@echo "... topic_tools_generate_messages_py"
-	@echo "... topic_tools_generate_messages_nodejs"
-	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... topic_tools_generate_messages_eus"
-	@echo "... topic_tools_generate_messages_cpp"
+	@echo "... mo_pl"
 	@echo "... src/motion_planning_api.o"
 	@echo "... src/motion_planning_api.i"
 	@echo "... src/motion_planning_api.s"
