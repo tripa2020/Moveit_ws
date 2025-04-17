@@ -12829,6 +12829,19 @@ _run_tests_pilz_industrial_motion_planner_gtest_unittest_trajectory_generator/fa
 	$(MAKE) -f moveit/moveit_planners/pilz_industrial_motion_planner/CMakeFiles/_run_tests_pilz_industrial_motion_planner_gtest_unittest_trajectory_generator.dir/build.make moveit/moveit_planners/pilz_industrial_motion_planner/CMakeFiles/_run_tests_pilz_industrial_motion_planner_gtest_unittest_trajectory_generator.dir/build
 .PHONY : _run_tests_pilz_industrial_motion_planner_gtest_unittest_trajectory_generator/fast
 
+#=============================================================================
+# Target rules for targets named tripp_st_mach
+
+# Build rule for target.
+tripp_st_mach: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tripp_st_mach
+.PHONY : tripp_st_mach
+
+# fast build rule for target.
+tripp_st_mach/fast:
+	$(MAKE) -f tripp_moveit_commander/CMakeFiles/tripp_st_mach.dir/build.make tripp_moveit_commander/CMakeFiles/tripp_st_mach.dir/build
+.PHONY : tripp_st_mach/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -13816,6 +13829,7 @@ help:
 	@echo "... _run_tests_pilz_industrial_motion_planner_gtest_unittest_velocity_profile_atrap"
 	@echo "... unittest_trajectory_functions"
 	@echo "... _run_tests_pilz_industrial_motion_planner_gtest_unittest_trajectory_generator"
+	@echo "... tripp_st_mach"
 .PHONY : help
 
 

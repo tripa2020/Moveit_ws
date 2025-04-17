@@ -5,6 +5,8 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
+        - /MotionPlanning1/Scene Robot1
+        - /MotionPlanning1/Planning Request1
         - /RobotState1
         - /Trajectory1
         - /Marker1
@@ -421,7 +423,9 @@ Visualization Manager:
       Marker Topic: /rviz_visual_tools
       Name: MarkerArray
       Namespaces:
-        {}
+        Path: true
+        Sphere: true
+        Text: true
       Queue Size: 100
       Value: true
   Enabled: true
@@ -440,7 +444,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.113736152648926
+      Distance: 2.465984344482422
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -456,9 +460,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.09500004351139069
+      Pitch: 0.020000018179416656
       Target Frame: world
-      Yaw: 6.204950332641602
+      Yaw: 5.624935150146484
     Saved: ~
 Window Geometry:
   Displays:
@@ -480,5 +484,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1291
-  X: 454
-  Y: 27
+  X: 420
+  Y: 66

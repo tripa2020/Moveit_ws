@@ -888,7 +888,7 @@ kdl_parser_DIR:PATH=/opt/ros/noetic/share/kdl_parser/cmake
 laser_geometry_DIR:PATH=/opt/ros/noetic/share/laser_geometry/cmake
 
 //Path to a library.
-lib:FILEPATH=/usr/lib/liborocos-kdl.so
+lib:FILEPATH=/opt/ros/noetic/lib/libtf.so
 
 //The directory containing a CMake configuration file for map_msgs.
 map_msgs_DIR:PATH=/opt/ros/noetic/share/map_msgs/cmake
@@ -1890,6 +1890,12 @@ tripp_hw_interface_BINARY_DIR:STATIC=/home/alex/moveit_ws/build/tripp_hw_interfa
 tripp_hw_interface_SOURCE_DIR:STATIC=/home/alex/moveit_ws/src/tripp_hw_interface
 
 //Value Computed by CMake
+tripp_moveit_commander_BINARY_DIR:STATIC=/home/alex/moveit_ws/build/tripp_moveit_commander
+
+//Value Computed by CMake
+tripp_moveit_commander_SOURCE_DIR:STATIC=/home/alex/moveit_ws/src/tripp_moveit_commander
+
+//Value Computed by CMake
 tripp_moveit_config_BINARY_DIR:STATIC=/home/alex/moveit_ws/build/tripp_moveit_config
 
 //Value Computed by CMake
@@ -2122,7 +2128,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=169
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=170
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

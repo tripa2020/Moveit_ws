@@ -202,6 +202,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/alex/moveit_ws/build/moveit_tutorials/cmake_install.cmake")
   include("/home/alex/moveit_ws/build/moveit/moveit_planners/pilz_industrial_motion_planner_testutils/cmake_install.cmake")
   include("/home/alex/moveit_ws/build/moveit/moveit_planners/pilz_industrial_motion_planner/cmake_install.cmake")
+  include("/home/alex/moveit_ws/build/tripp_moveit_commander/cmake_install.cmake")
 
 endif()
 

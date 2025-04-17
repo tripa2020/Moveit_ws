@@ -151,6 +151,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "tripp_description/catkin_generated/package.cmake"
   "tripp_hw_interface/catkin_generated/ordered_paths.cmake"
   "tripp_hw_interface/catkin_generated/package.cmake"
+  "tripp_moveit_commander/catkin_generated/ordered_paths.cmake"
+  "tripp_moveit_commander/catkin_generated/package.cmake"
   "tripp_moveit_config/catkin_generated/package.cmake"
   "using_markers/catkin_generated/ordered_paths.cmake"
   "using_markers/catkin_generated/package.cmake"
@@ -482,6 +484,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/alex/moveit_ws/src/tripp_description/package.xml"
   "/home/alex/moveit_ws/src/tripp_hw_interface/CMakeLists.txt"
   "/home/alex/moveit_ws/src/tripp_hw_interface/package.xml"
+  "/home/alex/moveit_ws/src/tripp_moveit_commander/CMakeLists.txt"
+  "/home/alex/moveit_ws/src/tripp_moveit_commander/package.xml"
   "/home/alex/moveit_ws/src/tripp_moveit_config/CMakeLists.txt"
   "/home/alex/moveit_ws/src/tripp_moveit_config/package.xml"
   "/home/alex/moveit_ws/src/using_markers/CMakeLists.txt"
@@ -1192,6 +1196,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "moveit_tutorials/doc/mesh_filter/CMakeFiles/CMakeDirectoryInformation.cmake"
   "moveit/moveit_planners/pilz_industrial_motion_planner_testutils/CMakeFiles/CMakeDirectoryInformation.cmake"
   "moveit/moveit_planners/pilz_industrial_motion_planner/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tripp_moveit_commander/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -2170,4 +2175,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "moveit/moveit_planners/pilz_industrial_motion_planner/CMakeFiles/_run_tests_pilz_industrial_motion_planner_gtest_unittest_velocity_profile_atrap.dir/DependInfo.cmake"
   "moveit/moveit_planners/pilz_industrial_motion_planner/CMakeFiles/unittest_trajectory_functions.dir/DependInfo.cmake"
   "moveit/moveit_planners/pilz_industrial_motion_planner/CMakeFiles/_run_tests_pilz_industrial_motion_planner_gtest_unittest_trajectory_generator.dir/DependInfo.cmake"
+  "tripp_moveit_commander/CMakeFiles/tripp_st_mach.dir/DependInfo.cmake"
   )

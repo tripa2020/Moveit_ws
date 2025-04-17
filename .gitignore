@@ -4,3 +4,5 @@ install/
 *.swp
 *.log
 src/rosserial/
+src/moveit_resources/
+src/moveit_tutorials/

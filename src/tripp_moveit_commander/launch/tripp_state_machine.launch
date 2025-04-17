@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="tripp_state_machine" pkg="tripp_moveit_commander" type="tripp_st_mach" respawn="false" output="screen">
+  </node>
+
+</launch>
